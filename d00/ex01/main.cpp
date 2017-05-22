@@ -84,31 +84,31 @@ void Contacts::getName(void)
     }
 
     std::cout << "|"
-    << this->_id
-    << "         |"
-    << first
-    << "|"
-    << last
-    << "|"
-    << nick
-    << "|"
-    << std::endl;
+              << this->_id
+              << "         |"
+              << first
+              << "|"
+              << last
+              << "|"
+              << nick
+              << "|"
+              << std::endl;
 }
 
 void Contacts::get(void)
 {
     std::cout << "Index: " << this->_id << std::endl
-    << "First Name: " << this->_fn << std::endl
-    << "Last Name: " << this->_ln << std::endl
-    << "Nickname: " << this->_nn << std::endl
-    << "Login: " << this->_l << std::endl
-    << "Postal Address: " << this->_pa << std::endl
-    << "Email Address: " << this->_ea << std::endl
-    << "Phone Number: " << this->_pn << std::endl
-    << "Birthday Date: " << this->_bd << std::endl
-    << "Favourite Meal: " << this->_fm << std::endl
-    << "Underwear Color: " << this->_uc << std::endl
-    << "Darkest Secret: " << this->_ds << std::endl;
+              << "First Name: " << this->_fn << std::endl
+              << "Last Name: " << this->_ln << std::endl
+              << "Nickname: " << this->_nn << std::endl
+              << "Login: " << this->_l << std::endl
+              << "Postal Address: " << this->_pa << std::endl
+              << "Email Address: " << this->_ea << std::endl
+              << "Phone Number: " << this->_pn << std::endl
+              << "Birthday Date: " << this->_bd << std::endl
+              << "Favourite Meal: " << this->_fm << std::endl
+              << "Underwear Color: " << this->_uc << std::endl
+              << "Darkest Secret: " << this->_ds << std::endl;
 }
 
 int main(void)
@@ -118,6 +118,7 @@ int main(void)
     int index = 0;
     while (active == 1)
     {
+        std::string name;
         std::string fn;
         std::string ln;
         std::string mn;
@@ -133,7 +134,7 @@ int main(void)
         int selected;
         std::cout << "=>";
         std::string action;
-        std::cin >> action;
+        std::getline(std::cin, action);
         if (action.compare("EXIT") == 0)
         {
             active = 0;
@@ -147,27 +148,27 @@ int main(void)
             else
             {
                 std::cout << "First Name: ";
-                std::cin >> fn;
+                std::getline(std::cin, fn);
                 std::cout << "Last Name: ";
-                std::cin >> ln;
+                std::getline(std::cin, ln);
                 std::cout << "Nickname: ";
-                std::cin >> nn;
+                std::getline(std::cin, nn);
                 std::cout << "Login: ";
-                std::cin >> l;
+                std::getline(std::cin, l);
                 std::cout << "Postal Address: ";
-                std::cin >> pa;
+                std::getline(std::cin, pa);
                 std::cout << "Email Address: ";
-                std::cin >> ea;
+                std::getline(std::cin, ea);
                 std::cout << "Phone Number: ";
-                std::cin >> pn;
+                std::getline(std::cin, pn);
                 std::cout << "Birthday Date: ";
-                std::cin >> bd;
+                std::getline(std::cin, bd);
                 std::cout << "Favourite Meal: ";
-                std::cin >> fm;
+                std::getline(std::cin, fm);
                 std::cout << "Underwear Color: ";
-                std::cin >> uc;
+                std::getline(std::cin, uc);
                 std::cout << "Darkest Secret: ";
-                std::cin >> ds;
+                std::getline(std::cin, ds);
                 contacts[index].set(index, fn, ln, nn, l, pa, ea, pn, bd, fm, uc, ds);
                 index++;
             }
@@ -180,8 +181,16 @@ int main(void)
                 contacts[x].getName();
             }
             std::cout << "Select an Index: ";
-            std::cin >> selected;
-            contacts[selected].get();
+            std::getline(std::cin, selected);
+            if (selected)
+            {
+                contacts[selected].get();
+            }
+            else
+            {
+                std::cout << "Invalid Selection";
+            }
+            std::cout << std::endl;
         }
     }
     return 0;
