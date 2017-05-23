@@ -4,7 +4,7 @@
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type) {}
+Zombie::Zombie(std::string name, std::string type) : _type(type), _name(name) {}
 
 Zombie::~Zombie(void) {
     return;
