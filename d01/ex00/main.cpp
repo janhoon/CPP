@@ -1,13 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: janhoon <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/23 10:19:57 by janhoon           #+#    #+#             */
-/*   Updated: 2017/05/23 10:19:59 by janhoon          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "Pony.hpp"
 
-
+int main(void)
+{
+    Pony Ross = Pony("Ross");
+    Ross.ponyOnTheStack();
+    Pony* Victor = Pony("Victor").ponyOnTheHeap();
+    delete Victor;
+    return 0;
+}
