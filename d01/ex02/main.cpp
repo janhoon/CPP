@@ -7,6 +7,7 @@ void randomChump(void) {
     Zombie* chump = ZombieEvent().newZombie(name[name_no]);
     ZombieEvent().setZombieType("klein kak", chump);
     chump->anounce();
+    delete chump;
 }
 
 int main() {
