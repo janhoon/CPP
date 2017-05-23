@@ -12,6 +12,13 @@
 
 #include "Contacts.class.hpp"
 
+int     test_int(std::string value, int phonebook_size)
+{
+    if (value.length() == 1 && value[0] > 47 && value[0] < 57 && (value[0] - '0') <= phonebook_size)
+        return 0;
+    return 1;
+}
+
 Contacts::Contacts(void)
 {
 }
@@ -131,7 +138,7 @@ int main(void)
         std::string fm;
         std::string uc;
         std::string ds;
-        int selected;
+        std::string selected;
         std::cout << "=>";
         std::string action;
         std::getline(std::cin, action);
@@ -182,9 +189,9 @@ int main(void)
             }
             std::cout << "Select an Index: ";
             std::getline(std::cin, selected);
-            if (selected)
+            if (test_int(selected, index) == 0)
             {
-                contacts[selected].get();
+                contacts[selected[0] - '0'].get();
             }
             else
             {
