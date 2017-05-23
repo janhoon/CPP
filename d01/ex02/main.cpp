@@ -1,26 +1,16 @@
 #include <iostream>
 #include "ZombieEvent.hpp"
 
-void randomChump(void) {
-    std::string name[] = {"Ross", "Victor", "Jan", "Koos", "Poes", "Jaco", "Albert", "Arno"};
+void randomChump(ZombieEvent env) {
+    std::string name[] = {"Ross", "Victor", "Jan", "Koos", "Pieter", "Jaco", "Albert", "Arno"};
     int name_no = std::rand() % 8;
-    Zombie* chump = ZombieEvent().newZombie(name[name_no]);
-    ZombieEvent().setZombieType("klein kak", chump);
+    Zombie* chump = env.newZombie(name[name_no]);
     chump->anounce();
     delete chump;
 }
 
 int main() {
-    std::srand(time(NULL));
-    randomChump();
-    randomChump();
-    randomChump();
-    randomChump();
-    randomChump();
-    randomChump();
-    randomChump();
-    randomChump();
-    randomChump();
-    randomChump();
-    randomChump();
+    ZombieEvent env;
+    env.setZombieType("Armless");
+    randomChump(env);
 }

@@ -10,8 +10,8 @@ ZombieEvent::~ZombieEvent(void) {
     return;
 }
 
-void ZombieEvent::setZombieType(std::string type, Zombie* zombie) {
-    zombie->_type = type;
+void ZombieEvent::setZombieType(std::string type) {
+    this->_type = type;
 }
 
 Zombie* ZombieEvent::newZombie(std::string name) {

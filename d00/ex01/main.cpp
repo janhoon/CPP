@@ -14,7 +14,7 @@
 
 int     test_int(std::string value, int phonebook_size)
 {
-    if (value.length() == 1 && value[0] > 47 && value[0] < 57 && (value[0] - '0') <= phonebook_size)
+    if (value.length() == 1 && value[0] > 47 && value[0] < 57 && (value[0] - '0') <= (phonebook_size - 1))
         return 0;
     return 1;
 }
@@ -62,7 +62,7 @@ void Contacts::getName(void)
         first = this->_fn;
         for (unsigned long i = 0; i < (10 - this->_fn.length()); i++)
         {
-            first = first + " ";
+            first = " " + first;
         }
     }
     if (this->_ln.length() > 10)
@@ -74,7 +74,7 @@ void Contacts::getName(void)
         last = this->_ln;
         for (unsigned long i = 0; i < (10 - this->_ln.length()); i++)
         {
-            last = last + " ";
+            last = " " + last;
         }
     }
     if (this->_nn.length() > 10)
@@ -86,13 +86,13 @@ void Contacts::getName(void)
         nick = this->_nn;
         for (unsigned long i = 0; i < (10 - this->_nn.length()); i++)
         {
-            nick = nick + " ";
+            nick = " " + nick;
         }
     }
 
-    std::cout << "|"
+    std::cout << "|         "
               << this->_id
-              << "         |"
+              << "|"
               << first
               << "|"
               << last
@@ -195,9 +195,8 @@ int main(void)
             }
             else
             {
-                std::cout << "Invalid Selection";
+                std::cout << "Invalid Selection" << std::endl;
             }
-            std::cout << std::endl;
         }
     }
     return 0;
