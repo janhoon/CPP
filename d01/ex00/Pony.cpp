@@ -12,20 +12,22 @@
 
 #include "Pony.hpp"
 
-Pony::Pony(std::string color) : _color(color) {
-    std::cout << "Hello  " << this->_color << std::endl;
+Pony::Pony(std::string color) {
+    std::cout << "Hello " << color << std::endl;
 }
 
 Pony::~Pony(void) {
-    std::cout << "RIP " << this->_color << " pony" << std::endl;
+    std::cout << "RIP " << this->_color << std::endl;
 }
 
-Pony *Pony::ponyOnTheHeap(void) {
-    std::cout << "On the heap" << std::endl;
+Pony *Pony::ponyOnTheHeap(std::string color) {
+    this->_color = color;
+    std::cout << "To the heap" << std::endl;
     return new Pony(this->_color);
 }
 
-Pony Pony::ponyOnTheStack(void) {
-    std::cout << "On the stack" << std::endl;
+Pony Pony::ponyOnTheStack(std::string color) {
+    this->_color = color;
+    std::cout << "To the stack" << std::endl;
     return Pony(this->_color);
 }

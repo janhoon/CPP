@@ -21,8 +21,8 @@ class Pony
     public:
     Pony(std::string color);
     ~Pony(void);
-    Pony *ponyOnTheHeap(void);
-    Pony ponyOnTheStack(void);
+    Pony *ponyOnTheHeap(std::string color);
+    Pony ponyOnTheStack(std::string color);
 
     private:
     std::string _color;

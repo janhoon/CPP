@@ -10,6 +10,7 @@ void randomChump(ZombieEvent env) {
 }
 
 int main() {
+    std::srand(time(NULL));
     ZombieEvent env;
     env.setZombieType("Armless");
     randomChump(env);
