@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Bureaucrat.cpp
+Bureaucrat.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Bureaucrat.hpp
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Bureaucrat.hpp
+exception
+-
+iostream
+-
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Form.cpp
+Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Form.hpp
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Form.hpp
+iostream
+-
+Bureaucrat.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Bureaucrat.hpp
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/main.cpp
+iostream
+-
+Bureaucrat.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Bureaucrat.hpp
+Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex01/Form.hpp
+

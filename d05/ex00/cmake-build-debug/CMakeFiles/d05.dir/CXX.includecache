@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/Bureaucrat.cpp
+Bureaucrat.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/Bureaucrat.hpp
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/Bureaucrat.hpp
+exception
+-
+iostream
+-
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/main.cpp
+iostream
+-
+Bureaucrat.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/Bureaucrat.hpp
+
