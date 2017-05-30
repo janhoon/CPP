@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.7)
-project(ex03)
+project(d05)
 
 set(CMAKE_CXX_STANDARD 98)
 
-set(SOURCE_FILES main.cpp)
-add_executable(ex03 ${SOURCE_FILES})
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
+
+set(SOURCE_FILES main.cpp Bureaucrat.cpp Bureaucrat.hpp Form.cpp Form.hpp ShrubberyCreationForm.cpp ShrubberyCreationForm.hpp RobotomyRequestForm.cpp RobotomyRequestForm.hpp PresidentialPardonForm.cpp PresidentialPardonForm.hpp Intern.cpp Intern.hpp)
+add_executable(d05 ${SOURCE_FILES})

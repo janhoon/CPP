@@ -13,6 +13,7 @@ private:
     const std::string _name;
     bool _formSigned;
     const unsigned int _minGrade;
+    const unsigned int _execGrade;
 public:
     Form();
     Form(std::string const & name, unsigned int & grade);

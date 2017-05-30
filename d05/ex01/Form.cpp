@@ -4,9 +4,9 @@
 
 #include "Form.hpp"
 
-Form::Form() : _name("A random from"), _formSigned(0), _minGrade(150) {}
+Form::Form() : _name("A random from"), _formSigned(0), _minGrade(150), _execGrade(150) {}
 
-Form::Form(std::string const &name, unsigned int &grade) : _name(name), _formSigned(0), _minGrade(grade) {
+Form::Form(std::string const &name, unsigned int &grade) : _name(name), _formSigned(0), _minGrade(grade), _execGrade(0) {
     if (_minGrade > 150) {
         throw (GradeTooHighException());
     } else if (_minGrade == 0) {
@@ -14,7 +14,7 @@ Form::Form(std::string const &name, unsigned int &grade) : _name(name), _formSig
     }
 }
 
-Form::Form(Form const &bur): _name(bur._name), _formSigned(bur._formSigned), _minGrade(bur._minGrade) {}
+Form::Form(Form const &bur): _name(bur._name), _formSigned(bur._formSigned), _minGrade(bur._minGrade), _execGrade(bur._execGrade) {}
 
 Form &Form::operator=(Form const &rhs) {
     this->_formSigned = rhs._formSigned;
