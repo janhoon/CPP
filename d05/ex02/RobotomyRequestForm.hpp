@@ -6,8 +6,17 @@
 #define D05_ROBOTOMYREQUESTFORM_HPP
 
 
-class RobotomyRequestForm {
+#include "Form.hpp"
 
+class RobotomyRequestForm : public Form {
+public:
+    RobotomyRequestForm();
+    RobotomyRequestForm(std::string name);
+    RobotomyRequestForm(RobotomyRequestForm const & form);
+    RobotomyRequestForm &operator=(RobotomyRequestForm const & form);
+    ~RobotomyRequestForm();
+
+    void action() const;
 };
 
 

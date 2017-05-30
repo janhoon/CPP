@@ -6,55 +6,63 @@
 
 #IncludeRegexTransform: 
 
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Bureaucrat.cpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Bureaucrat.cpp
 Bureaucrat.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Bureaucrat.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Bureaucrat.hpp
 
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Bureaucrat.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Bureaucrat.hpp
 exception
 -
 iostream
 -
-
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Form.cpp
 Form.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Form.hpp
 
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Form.cpp
+Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Form.hpp
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Form.hpp
 iostream
 -
 Bureaucrat.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Bureaucrat.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Bureaucrat.hpp
 
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/PresidentialPardonForm.cpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/PresidentialPardonForm.cpp
 PresidentialPardonForm.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/PresidentialPardonForm.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/PresidentialPardonForm.hpp
 
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/PresidentialPardonForm.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/PresidentialPardonForm.hpp
 Form.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Form.hpp
 
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/RobotomyRequestForm.cpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/RobotomyRequestForm.cpp
 RobotomyRequestForm.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/RobotomyRequestForm.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/RobotomyRequestForm.hpp
 
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/RobotomyRequestForm.hpp
-
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/ShrubberyCreationForm.cpp
-ShrubberyCreationForm.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/ShrubberyCreationForm.hpp
-
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/ShrubberyCreationForm.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/RobotomyRequestForm.hpp
 Form.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Form.hpp
 
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/main.cpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/ShrubberyCreationForm.cpp
+ShrubberyCreationForm.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/ShrubberyCreationForm.hpp
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/ShrubberyCreationForm.hpp
+Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Form.hpp
+fstream
+-
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/main.cpp
 iostream
 -
 Bureaucrat.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Bureaucrat.hpp
-Form.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/Form.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/Bureaucrat.hpp
 ShrubberyCreationForm.hpp
-/home/janhoon/Desktop/CPP Bootcamp/d05/ex02/ShrubberyCreationForm.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/ShrubberyCreationForm.hpp
+RobotomyRequestForm.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/RobotomyRequestForm.hpp
+PresidentialPardonForm.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d05/ex02/PresidentialPardonForm.hpp
 

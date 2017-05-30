@@ -7,6 +7,9 @@
 
 #include <exception>
 #include <iostream>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat {
 private:
@@ -32,6 +35,7 @@ public:
     void incGrade();
     void decGrade();
     void signForm(bool success, std::string form);
+    void executeForm(Form const & form) const;
 };
 
 std::ostream & operator<<(std::ostream & o, Bureaucrat const & bur);

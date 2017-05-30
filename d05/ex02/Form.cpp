@@ -55,6 +55,25 @@ unsigned int Form::getExe() const {
     return _execGrade;
 }
 
+void Form::execute(Bureaucrat const &executor) const {
+    if (executor.getGrade() > getGrade()) {
+        std::cout << "Bureaucrat " << executor.getName() << " cannot execute form "
+                  << _name << std::endl;
+        throw(GradeTooLowException());
+    } else {
+        (const_cast<Form*>(this))->setSigned(1);
+        this->action();
+    }
+    executor.executeForm(*this);
+}
+
+void Form::setSigned(bool i) {
+    this->_formSigned = i;
+}
+
+void Form::action() const {}
+
+
 const char *Form::GradeTooHighException::what() const throw() {
     return "\033[1;31mGRADE TOO HIGH\033[0m\n";
 }
@@ -66,11 +85,11 @@ const char *Form::GradeTooLowException::what() const throw() {
 
 std::ostream &operator<<(std::ostream &o, Form const &form) {
     if (form.isSigned()) {
-        o << "Form " << form.getName() << " that requires a grade of at least "
+        o << "Form for " << form.getName() << " that requires a grade of at least "
           << form.getGrade() << " was signed and requires a grade of "
-          << form.getExe() << "to be executed";
+          << form.getExe() << " to be executed";
     } else {
-        o << "Form " << form.getName() << " that requires a grade of at least "
+        o << "Form for " << form.getName() << " that requires a grade of at least "
           << form.getGrade() << " is still unsigned and requires a grade of at least "
           << form.getExe() << " to be executed";
     }

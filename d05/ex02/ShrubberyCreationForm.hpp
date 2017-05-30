@@ -7,6 +7,7 @@
 
 
 #include "Form.hpp"
+#include <fstream>
 
 class ShrubberyCreationForm: public Form {
 public:
@@ -15,6 +16,8 @@ public:
     ShrubberyCreationForm(ShrubberyCreationForm const & form);
     ShrubberyCreationForm &operator=(ShrubberyCreationForm const & fomr);
     ~ShrubberyCreationForm();
+
+    void action() const;
 };
 
 

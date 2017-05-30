@@ -8,9 +8,11 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form {
-protected:
-    const               std::string _name;
+private:
+    const std::string   _name;
     bool                _formSigned;
     const unsigned int  _minGrade;
     const unsigned int  _execGrade;
@@ -22,6 +24,7 @@ public:
     Form &operator=(Form const & rhs);
     virtual ~Form();
 
+
     class GradeTooHighException: public std::exception {
         virtual const char *what() const throw();
     };
@@ -29,12 +32,21 @@ public:
         virtual const char *what() const throw();
     };
 
+    //getters
+
     std::string getName() const;
     unsigned int getGrade() const;
     unsigned int getExe() const;
     bool isSigned() const;
 
+    //setters
+    void setSigned(bool i);
+
     void beSigned(Bureaucrat &bur);
+    void execute(Bureaucrat const & executor) const;
+
+    virtual void action() const;
+
 };
 
 std::ostream & operator<<(std::ostream & o, Form const & form);

@@ -1,15 +1,17 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main() {
+    std::srand(std::time(0));
     try {
-        unsigned int setGrade = 100;
+        unsigned int setGrade = 150;
         Bureaucrat koos("koos", setGrade);
         Bureaucrat jan(koos);
         Bureaucrat piet = koos;
-        setGrade = 50;
+        setGrade = 5;
         std::cout << piet << std::endl;
         koos.incGrade();
         std::cout << koos << std::endl;
@@ -25,6 +27,11 @@ int main() {
         std::cout << "<----- 3 New Forms(ex02) ----->" << std::endl;
         ShrubberyCreationForm shrub("shrub");
         std::cout << shrub << std::endl;
+        RobotomyRequestForm rob("rob");
+        std::cout << rob << std::endl;
+        PresidentialPardonForm trump("trump");
+        std::cout << trump << std::endl;
+        rob.execute(albert);
     } catch (std::exception & e) {
         std::cout << e.what() << std::endl;
     }

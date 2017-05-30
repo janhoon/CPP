@@ -57,6 +57,14 @@ void Bureaucrat::signForm(bool success, std::string form) {
     }
 }
 
+void Bureaucrat::executeForm(Form const &form) const {
+    if (form.isSigned()) {
+        std::cout << getName() << " executes " << form.getName() << std::endl;
+    } else {
+        std::cout << getName() << " failed to execute " << form.getName() << std::endl;
+    }
+}
+
 std::ostream &operator<<(std::ostream &o, Bureaucrat const &bur) {
     o << bur.getName() << ", bureaucrat grade " << bur.getGrade();
     return o;

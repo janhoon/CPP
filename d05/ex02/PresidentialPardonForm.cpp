@@ -16,7 +16,12 @@ PresidentialPardonForm::~PresidentialPardonForm() {
 }
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm const &form) {
-    this->_formSigned = form._formSigned;
+    this->setSigned(form.isSigned());
     return *this;
+}
+
+void PresidentialPardonForm::action() const {
+    std::cout << getName() << " has been pardoned by Zafod Beeblebrox.\n";
+    Form::action();
 }
 
