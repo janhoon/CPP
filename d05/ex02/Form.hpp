@@ -10,11 +10,13 @@
 
 class Form {
 protected:
-    const std::string _name;
-    bool _formSigned;
-    const unsigned int _minGrade;
+    const               std::string _name;
+    bool                _formSigned;
+    const unsigned int  _minGrade;
+    const unsigned int  _execGrade;
 public:
     Form();
+    Form(std::string const & name, unsigned int signGrade, unsigned int execGrade);
     Form(std::string const & name, unsigned int & grade);
     Form(Form const & bur);
     Form &operator=(Form const & rhs);
@@ -29,6 +31,7 @@ public:
 
     std::string getName() const;
     unsigned int getGrade() const;
+    unsigned int getExe() const;
     bool isSigned() const;
 
     void beSigned(Bureaucrat &bur);

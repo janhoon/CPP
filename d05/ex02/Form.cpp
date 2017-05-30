@@ -4,9 +4,9 @@
 
 #include "Form.hpp"
 
-Form::Form() : _name("A random from"), _formSigned(0), _minGrade(150) {}
+Form::Form() : _name("A random from"), _formSigned(0), _minGrade(150), _execGrade(150) {}
 
-Form::Form(std::string const &name, unsigned int &grade) : _name(name), _formSigned(0), _minGrade(grade) {
+Form::Form(std::string const &name, unsigned int &grade) : _name(name), _formSigned(0), _minGrade(grade), _execGrade(150) {
     if (_minGrade > 150) {
         throw (GradeTooHighException());
     } else if (_minGrade == 0) {
@@ -14,7 +14,7 @@ Form::Form(std::string const &name, unsigned int &grade) : _name(name), _formSig
     }
 }
 
-Form::Form(Form const &bur): _name(bur._name), _formSigned(bur._formSigned), _minGrade(bur._minGrade) {}
+Form::Form(Form const &bur): _name(bur._name), _formSigned(bur._formSigned), _minGrade(bur._minGrade), _execGrade(bur._execGrade) {}
 
 Form &Form::operator=(Form const &rhs) {
     this->_formSigned = rhs._formSigned;
@@ -47,6 +47,14 @@ void Form::beSigned(Bureaucrat &bur) {
     }
 }
 
+Form::Form(std::string const &name, unsigned int signGrade, unsigned int execGrade): _name(name), _formSigned(0), _minGrade(signGrade), _execGrade(execGrade) {
+
+}
+
+unsigned int Form::getExe() const {
+    return _execGrade;
+}
+
 const char *Form::GradeTooHighException::what() const throw() {
     return "\033[1;31mGRADE TOO HIGH\033[0m\n";
 }
@@ -59,10 +67,12 @@ const char *Form::GradeTooLowException::what() const throw() {
 std::ostream &operator<<(std::ostream &o, Form const &form) {
     if (form.isSigned()) {
         o << "Form " << form.getName() << " that requires a grade of at least "
-          << form.getGrade() << " was signed";
+          << form.getGrade() << " was signed and requires a grade of "
+          << form.getExe() << "to be executed";
     } else {
         o << "Form " << form.getName() << " that requires a grade of at least "
-          << form.getGrade() << " is still unsigned";
+          << form.getGrade() << " is still unsigned and requires a grade of at least "
+          << form.getExe() << " to be executed";
     }
     return o;
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main() {
     try {
@@ -21,6 +22,9 @@ int main() {
         std::cout << act1 << std::endl;
         act1.beSigned(albert);
         std::cout << act1 << std::endl;
+        std::cout << "<----- 3 New Forms(ex02) ----->" << std::endl;
+        ShrubberyCreationForm shrub("shrub");
+        std::cout << shrub << std::endl;
     } catch (std::exception & e) {
         std::cout << e.what() << std::endl;
     }

@@ -6,8 +6,15 @@
 #define D05_SHRUBBERYCREATIONFORM_HPP
 
 
-class ShrubberyCreationForm {
+#include "Form.hpp"
 
+class ShrubberyCreationForm: public Form {
+public:
+    ShrubberyCreationForm();
+    ShrubberyCreationForm(std::string name);
+    ShrubberyCreationForm(ShrubberyCreationForm const & form);
+    ShrubberyCreationForm &operator=(ShrubberyCreationForm const & fomr);
+    ~ShrubberyCreationForm();
 };
 
 
