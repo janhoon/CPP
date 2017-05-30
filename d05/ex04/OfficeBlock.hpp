@@ -17,10 +17,13 @@ public:
     void setSigner(Bureaucrat const & bur);
     void setExecutor(Bureaucrat const & bur);
 
-    void checkOffice();
+    bool checkOffice();
     void doBureaucracy(std::string const & type, std::string const & name);
 
-    class bureaucracyException
+    class bureaucracyException : public std::exception {
+    public:
+        virtual const char *what() const throw();
+    };
 
 private:
     OfficeBlock(OfficeBlock const & ob);

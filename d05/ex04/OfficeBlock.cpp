@@ -40,9 +40,21 @@ void OfficeBlock::setExecutor(Bureaucrat const &bur) {
 }
 
 void OfficeBlock::doBureaucracy(std::string const &type, std::string const & name) {
-    _job = _intern.makeForm(type, name);
+    if (checkOffice() == 1) {
+        _job = _intern.makeForm(type, name);
+    }
+    throw OfficeBlock::bureaucracyException();
 }
 
-void OfficeBlock::checkOffice() {
+bool OfficeBlock::checkOffice() {
+    std::cout << _hired << std::endl;
+    if (_hired == 3) {
+        return 1;
+    }
+    return 0;
+}
 
+const char *OfficeBlock::bureaucracyException::what() const throw() {
+
+    return "Not enough staff to complete the job";
 }

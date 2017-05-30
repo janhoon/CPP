@@ -9,22 +9,20 @@
 int main()
 {
     Intern idiotOne;
-    Bureaucrat hermes = Bureaucrat("Hermes Conrad", 37);
     Bureaucrat bob = Bureaucrat("Bobby Bobson", 123);
     OfficeBlock ob;
     ob.setIntern(idiotOne);
     ob.setSigner(bob);
-    ob.setExecutor(hermes);
     try
     {
         ob.doBureaucracy("mutant pig termination", "Pigley");
     }
-    catch (Some::SpecificException & e)
+    catch (OfficeBlock::bureaucracyException & e)
     {
-/* specific known error happens, say something */
+        std::cout << e.what() << std::endl;
     }
     catch (std::exception & e)
     {
-/* oh god, unknown error, what to do ?! */
+        std::cout << e.what() << std::endl;
     }
 }
