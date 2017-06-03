@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d08/ex02/main.cpp
+iostream
+-
+span.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d08/ex02/span.hpp
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d08/ex02/span.cpp
+span.hpp
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d08/ex02/span.hpp
+
+/nfs/zfs-student-6/users/janhoon/Desktop/Work/CPP/d08/ex02/span.hpp
+
